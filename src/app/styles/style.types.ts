@@ -41,7 +41,9 @@ export interface buttonProps {
 
 export enum TypographyBold {
   sm = "400",
+  sm2 = "500",
   md = "600",
+  md2 = "700",
   lg = "800",
 }
 

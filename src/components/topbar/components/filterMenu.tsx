@@ -1,5 +1,6 @@
 'use client'
 
+import Filter from "@/app/questions/components/filter/filter"
 import Drawer from "@components/drawer/drawer"
 import Text, { Head1 } from "@styles/components/text"
 import { TypographyBold, TypographySize } from "@styles/style.types"
@@ -16,7 +17,7 @@ const FilterMenu = ({
 }) => {
 
     return (
-        <div className="MobileMenu">
+        <div className="MobileMenu pb-[50px]">
             <Drawer
                 showdrawer={showMenu}
                 setShowdrawer={setShowMenu}
@@ -33,7 +34,9 @@ const FilterMenu = ({
                     </div>
                 }
             >
-
+                <Filter 
+                    className="!w-full !px-[15px]"
+                />
             </Drawer>
         </div>
     )

@@ -27,7 +27,7 @@ const Drawer = ({
                 x : showdrawer ? 0 : '100%',
                 opacity : showdrawer ? 1 : 0,
             }}
-            className="fixed top-0 left-0 z-10 w-[140vw] h-[120vh] bg-white "
+            className="fixed top-0 left-0 z-10 w-[140vw] h-[120vh] bg-white overflow-y-scroll"
         >
             <div
                 className="py-0 px-[20px] flex justify-between items-center w-[100vw] my-[10px] "

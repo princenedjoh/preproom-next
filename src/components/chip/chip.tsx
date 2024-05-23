@@ -7,7 +7,7 @@ const Chip = ({
 } : baseProps) => {
     return (
         <div 
-            className={`Chip flex px-[12px] h-fit py-[5px] rounded-full justify-center items-center duration-200 bg-theme-colors-main-bg cursor-pointer hover:bg-theme-colors-main-bg2 border-solid border-[1px] border-theme-colors-main-borderColor ${className}`}
+            className={`Chip w-fit flex px-[12px] h-fit py-[5px] rounded-full justify-center items-center duration-200 bg-theme-colors-main-bg cursor-pointer hover:bg-theme-colors-main-bg2 border-solid border-[1px] border-theme-colors-main-borderColor ${className}`}
             onClick={onClick}
         >
             {children}

@@ -52,7 +52,7 @@ const MobileMenu = ({
                     </div>
                 }
             >
-                <div className='flex flex-col justify-between h-[78vh]'>
+                <div className='flex flex-col justify-between h-[90vh]'>
                     <div className="flex flex-col gap-3">
                         <div className="px-[20px] mt-[5px]">
                             <MobileCourseSelector

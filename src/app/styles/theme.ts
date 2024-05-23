@@ -29,7 +29,7 @@ const theme = {
             text : {
                 head : colors.dark[2],
                 body : colors.dark[5],
-                light : colors.dark[7],
+                light : colors.dark[6],
                 extralight : colors.dark[8]
             },
             button : {

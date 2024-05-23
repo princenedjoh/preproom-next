@@ -29,7 +29,7 @@ const Text = ({
 
     return (
         <span
-            className={`${className}`}
+            className={` ${className}`}
             style={{
                 fontWeight : bold,
                 fontFamily : fontfamily,

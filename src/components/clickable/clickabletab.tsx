@@ -7,7 +7,7 @@ const ClickableTab = ({
 } : baseProps) => {
     return (
         <div 
-            className={`flex p-[7px] h-fit rounded-full hover:opacity-[0.9] duration-200 hover:bg-theme-colors-main-bg cursor-pointer !${className}`}
+            className={`flex p-[7px] px-[10px] h-fit rounded-full hover:opacity-[0.9] duration-200 hover:bg-theme-colors-main-bg cursor-pointer ${className}`}
             onClick={onClick}
         >
             {children}

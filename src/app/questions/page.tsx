@@ -2,6 +2,8 @@ import AppTypography from "@styles/components/appTypography"
 import Topics from "./components/topics"
 import Input from "@components/input/input"
 import Search from "./components/search"
+import QuestionList from "./components/question/questionList"
+import Filter from "./components/filter/filter"
 
 const Questions = () => {
     return (
@@ -10,9 +12,10 @@ const Questions = () => {
                 <div className="Wrapper flex flex-1 flex-col gap-3 md:gap-5 w-fit md:w-full">
                     <Topics />
                     <Search />
+                    <QuestionList />
                 </div>
-                <div className="hidden md:flex w-[250px] bg-theme-colors-main-bg rounded-xl h-[500px]">
-
+                <div className="hidden md:flex w-[250px] ">
+                    <Filter />
                 </div>
             </div>
         </div>
