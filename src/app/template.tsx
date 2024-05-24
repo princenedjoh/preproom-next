@@ -1,4 +1,3 @@
-import Flex from "@styles/components/flex";
 import "./globals.css";
 import Topbar from "@components/topbar/topbar";
 
@@ -8,14 +7,12 @@ const Template = ({
   children: React.ReactNode;
 }>) => {
   return (
-      <Flex
-        direction="column"
-      >
+      <div className="flex flex-col gap-2">
         <Topbar />
-        <div className="flex flex-col mt-[70px] md:mt-[100px] w-full">
+        <div className="flex flex-col items-center mt-[70px] lg:mt-[100px] w-full mb-[50px]">
             {children}
         </div>
-      </Flex>
+      </div>
   );
 }
 

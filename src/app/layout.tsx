@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <div className="flex flex-col gap-2 h-[100vh] justify-between">
         {children}
         <BackToTop />
         <Footer />
+      </div>
       </body>
     </html>
   );

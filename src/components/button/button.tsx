@@ -50,7 +50,7 @@ const Button = ({
         maxWidth,
         width : size?.width ?? 'fit-content',
         height : size?.height,
-        opacity : onHover ? hover?.opacity ?? 0.7 : 1,
+        opacity : onHover ? hover?.opacity ?? 0.9 : 1,
         transform : `scale(${onPress ? 0.97 : 1})`,
       }}
       onClick={onClick}
@@ -58,9 +58,9 @@ const Button = ({
       onMouseLeave={()=>setOnHover(false)}
       onMouseDown={()=>setOnPress(true)}
       onMouseUp={()=>setOnPress(false)}
-      className={`hover:animate-pulse ${className}`}
+      className={`hover:animate-pulse ${className} duration-200`}
     >
-      <div className="w-full justify-center items-center flex gap-[8px] md:mt-[-2px]">
+      <div className="w-full justify-center items-center flex gap-[8px] ">
         <AppTypography
           size={textSize}
           bold={textBold ?? TypographyBold.md}
@@ -68,7 +68,7 @@ const Button = ({
             onHover && hover?.color
               ? hover.color
               : color
-              ?? colors.dark[9]
+              ?? 'white'
           }
         >
           {children}
