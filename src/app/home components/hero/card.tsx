@@ -1,10 +1,26 @@
 'use client'
 
+import { hexOpacity } from "@/app/utils/hexOpacity"
 import Button from "@components/button/button"
 import Text from "@styles/components/text"
-import { useState } from "react"
+import { TypographyBold } from "@styles/style.types"
+import { ReactNode, useState } from "react"
 
-const Card = () => {
+const Card = ({
+    title,
+    description,
+    CTA,
+    back,
+    color,
+    Icon
+} : {
+    title : string,
+    description : string,
+    CTA : string,
+    back : string,
+    color : string,
+    Icon : ReactNode
+}) => {
 
     const [onHover, setOnHover] = useState<boolean>(false)
 
@@ -14,26 +30,39 @@ const Card = () => {
             onMouseOver={()=>setOnHover(true)}
             onMouseLeave={()=>setOnHover(false)}
         >
-            <div className="w-[160px] h-[150px] rounded-lg bg-cyan-400 absolute top-0 left-0">
-
+            <div 
+                className="w-[160px] h-[150px] rounded-lg absolute top-0 left-0 flex justify-center pt-[15px]"
+                style={{
+                    backgroundColor : color
+                }}
+            >
+                {Icon}
             </div>
             <div 
-                className={`p-[10px] w-[160px] h-[150px] rounded-lg bg-white border-[1px] border-solid ${onHover ? 'border-theme-colors-main-primary' : 'border-theme-colors-main-shadow'} shadow-lg shadow-theme-colors-main-shadowLight absolute bottom-0 right-0 duration-200 `}
+                className={`p-[10px] w-[160px] h-[150px] rounded-lg bg-white shadow-lg shadow-theme-colors-main-shadow absolute bottom-0 right-0 duration-200 `}
                     style={{
-                        transform : onHover ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                        transform : onHover ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                        border : `1px solid ${color}${hexOpacity(40)}`,
+                        boxShadow : `0 0 10px ${color}${hexOpacity(40)}`
                     }}
             >
                 <div className={`${onHover ? 'hidden' : 'flex'} h-full items-center justify-center flex-col gap-2`}>
-                    <Text>
-                        MCQS
+                    <Text
+                        bold={TypographyBold.md}
+                    >
+                        {title}
                     </Text>
                     <Text
                         textAlign="center"
+                        textColor={color}
                     >
-                        Solve Multiple Choice questions
+                        {description}
                     </Text>
-                    <Button>
-                        Get Started
+                    <Button
+                        background={color}
+                        border="none"
+                    >
+                       {CTA}
                     </Button>
                 </div>
                 <div 
@@ -44,11 +73,15 @@ const Card = () => {
                 >
                     <Text
                         textAlign="center"
+                        textColor={color}
                     >
-                        Practice and test your knowledge across various subjects with a wide range of multiple choice questions.
+                        {back}
                     </Text>
-                    <Button>
-                        Get Started
+                    <Button
+                        background={color}
+                        border="none"
+                    >
+                        {CTA}
                     </Button>
                 </div>
             </div>

@@ -1,11 +1,13 @@
+'use client'
+
 import Button from "@components/button/button"
-import Container from "@components/container/container"
 import Text from "@styles/components/text"
-import { TypographyBold, TypographySize } from "@styles/style.types"
-import theme from "@styles/theme"
 import Title from "../title"
+import { data } from "./data"
+import PersonalizeCard from "./personalizeCard"
 
 const Personalize = () => {
+
     return (
         <div className="Personalize px-[15px]">
             <div className="flex gap-5 w-full flex-wrap lg:w-minimumWidth justify-between">
@@ -27,27 +29,17 @@ const Personalize = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="w-full relative lg:w-[400px] flex flex-col gap-4 lg:items-end">
+                <div className="w-full relative lg:w-[500px] flex flex-col gap-4 lg:items-end">
                     {
-                        [1,2,3,4].map((item, index : number) => (
-                            <div 
-                                className={`w-full lg:w-[80%] relative ${index % 2 === 1 ? 'lg:right-[110px]' : 'lg:left-0'} p-[10px] rounded-lg border-[1px] border-solid border-theme-colors-main-primary `}
+                        data.map((item, index : number) => (
+                            <PersonalizeCard
                                 key={index}
-                            >
-                                <div className="flex gap-2 items-center">
-                                    <div className="w-[50px] h-[50px] rounded-full bg-theme-colors-main-bg">
-
-                                    </div>
-                                    <div className="flex flex-col flex-1 gap-2">
-                                        <Text>
-                                            Efficient Education
-                                        </Text>
-                                        <Text>
-                                            We ensure focused and efficient preparation that aligns with your individual needs
-                                        </Text>
-                                    </div>
-                                </div>
-                            </div>
+                                index={index}
+                                color={item.color}
+                                Icon={item.icon}
+                                title={item.title}
+                                description={item.description}
+                            />
                         ))
                     }
                 </div>

@@ -36,15 +36,17 @@ const Topbar = () => {
         <div className="Topbar-main flex px-[15px] fixed w-full z-50 items-center justify-center h-[50px] md:h-[70px] border-b-[1px] bg-white border-solid border-theme-colors-main-borderColor ">
             <div className="flex w-full md:w-minimumWidth justify-between items-center">
                 <div className="Left flex md:gap-[150px] items-center">
-                    <div className="flex bg-colors-dark-9 relative justify-center items-center w-[25px] h-[25px] rounded-[5px] overflow-hidden">
-                        <Image
-                            src={require('@/app/favicon.ico')}
-                            alt={'default image'}
-                            layout="fill"
-                            objectFit="cover"
-                            quality={100}
-                        />
-                    </div>
+                    <Link href={'/'}>
+                        <div className="flex bg-colors-dark-9 relative justify-center items-center w-[25px] h-[25px] rounded-[5px] overflow-hidden">
+                            <Image
+                                src={require('@/app/favicon.ico')}
+                                alt={'default image'}
+                                layout="fill"
+                                objectFit="cover"
+                                quality={100}
+                            />
+                        </div>
+                    </Link>
                     <div className="Menuitems hidden md:flex gap-[25px]">
                         {
                             menuItems.map((item, index : number) => (

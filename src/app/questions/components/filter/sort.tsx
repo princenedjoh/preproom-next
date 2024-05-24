@@ -11,7 +11,7 @@ import { FaLock, FaSortDown, FaSortUp } from "react-icons/fa6"
 
 const Sort = () => {
 
-    const [value, setValue] = useState<0 | 1 | 2>(0)
+    const [value, setValue] = useState(0)
 
     return (
         <Container
@@ -32,7 +32,10 @@ const Sort = () => {
                     </Text>
                 </div>
                 <Container
-                    className="!w-full !bg-white"
+                    className="!w-full !bg-white !cursor-pointer hover:!opacity-[0.8]"
+                    onClick={()=>(
+                        setValue((prev) => prev === 2 ? 0 : prev + 1)
+                    )}
                 >
                     <div className='w-full gap-2 flex justify-between items-center'>
                         <div className="flex items-center gap-2">
@@ -42,8 +45,30 @@ const Sort = () => {
                             </Text>
                         </div>
                         <div className="flex flex-col h-fit">
-                            <Text><FaSortUp /></Text>
-                            <Text><FaSortDown /></Text>
+                            <Text>
+                                <FaSortUp 
+                                    opacity={
+                                        value === 0
+                                            ? 1
+                                            : value === 1
+                                            ? 0
+                                            : 1
+                                    }
+                                    className="duration-300"
+                                />
+                            </Text>
+                            <Text className="!mt-[-8px]">
+                                <FaSortDown 
+                                    opacity={
+                                        value === 0
+                                            ? 1
+                                            : value === 1
+                                            ? 1
+                                            : 0
+                                    }
+                                    className="duration-300"
+                                />
+                            </Text>
                         </div>
                     </div>
                 </Container>

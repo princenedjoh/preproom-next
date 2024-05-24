@@ -17,7 +17,7 @@ const Search = () => {
                 placeholder="Search for courses"
                 content={searchValue}
                 setContent={setSearchValue}
-                className="!flex-1 !rounded-full md:!rounded-md !py-[7px] lg:!py-[10px]"
+                className="!flex-1 !rounded-full md:!rounded-md !py-[7px] lg:!py-[13px]"
                 PreIcon={<LuSearch color={theme.colors.main.text.light}/>}
             />
             <Dropdown 
