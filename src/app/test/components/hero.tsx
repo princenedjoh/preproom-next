@@ -5,7 +5,7 @@ import { PiExamFill } from "react-icons/pi"
 
 const Hero = () => {
     return (
-        <div className="w-full px-[15px] flex justify-center mt-[-130px] items-center h-[300px] bg-theme-colors-main-shadowLight border-b-[1px] border-solid border-theme-colors-main-borderColor">
+        <div className="w-full px-[15px] flex justify-center mt-[-70px] items-center h-[300px] bg-theme-colors-main-shadowLight border-b-[1px] border-solid border-theme-colors-main-borderColor">
             <div className="flex w-full lg:w-minimumWidth justify-center items-center ">
                 <div className='flex flex-col gap-1 items-center'>
                     <PiExamFill 
