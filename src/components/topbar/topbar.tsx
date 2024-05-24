@@ -33,7 +33,7 @@ const Topbar = () => {
     ])
 
     return (
-        <div className="Topbar-main flex px-[15px] fixed w-full z-50 items-center justify-center h-[50px] md:h-[70px] border-b-[1px] bg-white border-solid border-theme-colors-main-borderColor ">
+        <div className={`Topbar-main flex px-[15px] fixed w-full z-50 items-center justify-center h-[50px] md:h-[70px] border-b-[1px] bg-white border-solid border-theme-colors-main-borderColor `}>
             <div className="flex w-full md:w-minimumWidth justify-between items-center">
                 <div className="Left flex md:gap-[150px] items-center">
                     <Link href={'/'}>

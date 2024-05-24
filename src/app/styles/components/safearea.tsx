@@ -1,29 +1,16 @@
-import { colors } from "@styles/theme"
-import Flex from "./flex"
-import { safeareaProps } from "@/utils/@types"
-import { minimumwidth, standardMargin } from "@/utils/constants"
+import { ReactNode } from "react"
 
 const Safearea = ({
-    children,
-    width,
-    background,
-    defaultBackground,
-    padding
-} : safeareaProps) => {
+    children
+} : {
+    children? : ReactNode
+}) => {
     return (
-        <Flex
-            padding={padding ?? "80px 10px"}
-            direction="column"
-            align="center"
-            background={defaultBackground ? `${colors.dark[2]}33` : background}
-            className="SafeArea"
-        >
-            <div 
-                className={`SafeArea-container w-full ${width ? `md:w-[${width}]` : `md:w-minimumWidth`}`}>
+        <div className="SafeArea w-full px-[15px] flex justify-center">
+            <div className='Area w-full lg:w-minimumWidth'>
                 {children}
             </div>
-        </Flex>
+        </div>
     )
 }
-
 export default Safearea
