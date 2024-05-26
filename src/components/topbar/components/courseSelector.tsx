@@ -54,7 +54,7 @@ const CourseSelector = ({
                     <DropdownContainer
                         show={showDropdown}
                         setShow={setShowDropdown}
-                        className="w-[250px] !p-[10px]"
+                        className="w-[250px]"
                     >
                         <div className="flex flex-col gap-2 w-full">
                             <Input 

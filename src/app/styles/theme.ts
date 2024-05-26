@@ -75,8 +75,8 @@ const theme = {
             allColors : colors,
             text : {
                 head : colors.dark[2],
-                body : colors.dark[5],
-                light : colors.dark[6],
+                body : colors.dark[4],
+                light : colors.dark[5],
                 extralight : colors.dark[8]
             },
             button : {

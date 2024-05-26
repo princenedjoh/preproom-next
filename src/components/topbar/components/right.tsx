@@ -42,12 +42,12 @@ const Right = () => {
     ])
 
     return (
-        <div className="Right hidden md:flex gap-[20px] items-center">
+        <div className="Right hidden md:flex gap-2 items-center">
             <CourseSelector 
                 state={course}
                 setState={setCourse}
             />
-            <div className="flex gap-[10px] items-end mt-[-3px]">
+            <div className="flex gap-2 items-end mt-[-3px]">
                 {
                     badges.map((item, index : number) => (
                         <Badge
