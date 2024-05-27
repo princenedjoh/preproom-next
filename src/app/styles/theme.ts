@@ -12,9 +12,10 @@ export const colors = {
         7 : '#A2A2A2',
         8 : '#cccccc',
         9 : "#e6e6e6",
-        10 : '#F0F0F0',
-        11 : '#f7f7f7',
-        12 : '#FAFAFB'
+        10 : '#ededed',
+        11 : '#F0F0F0',
+        12 : '#f7f7f7',
+        13 : '#FAFAFB'
     },
 
     blue : {
@@ -70,8 +71,9 @@ const theme = {
             shadowLight : `#9772AE${hexOpacity(8)}`,
             borderColor : colors.dark[9],
             borderColorLight : colors.dark[10],
-            bg : colors.dark[11],
-            bg2 : colors.dark[10],
+            borderColorExtraLight : colors.dark[11],
+            bg : colors.dark[12],
+            bg2 : colors.dark[11],
             allColors : colors,
             text : {
                 head : colors.dark[2],

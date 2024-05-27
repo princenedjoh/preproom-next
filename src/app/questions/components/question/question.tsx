@@ -16,7 +16,7 @@ const Question = () => {
 
     return (
         <Container
-            className={`!p-[10px]`}
+            className={`!p-[10px] !bg-theme-colors-main-bg2 lg:!bg-theme-colors-main-bg`}
         >
             <div className="flex flex-col gap-2 w-full">
                 <Chip
